@@ -1,14 +1,14 @@
-import pgzrun
+import pgzrun#好  终于正常了 侵略者
 from random import randint
 import math
-DIFFICULTY = 1
+DIFFICULTY = 1#困难
 player = Actor("player", (400, 550)) # Load in the player Actor image
 
 def draw(): # Pygame Zero draw function
     screen.blit('background', (0, 0))
     player.image = player.images[math.floor(player.status/6)]
     player.draw()
-    drawLasers()
+    drawLasers()#雷射
     drawAliens()
     drawBases()
     screen.draw.text(str(score) , topright=(780, 10), owidth=0.5, ocolor=(255,255,255), color=(0,64,255) , fontsize=60)
@@ -33,7 +33,7 @@ def update(): # Pygame Zero update function
 def drawAliens():
     for a in range(len(aliens)): aliens[a].draw()
 
-def drawBases():
+def drawBases():#基地
     for b in range(len(bases)): bases[b].drawClipped()
 
 def drawLasers():
@@ -78,7 +78,7 @@ def updateLasers():
     lasers = listCleanup(lasers)
     aliens = listCleanup(aliens)
 
-def listCleanup(l):
+def listCleanup(l):#清理
     newList = []
     for i in range(len(l)):
         if l[i].status == 0: newList.append(l[i])
@@ -105,7 +105,7 @@ def checkPlayerLaserHit(l):
             score += 1000
             
 def updateAliens():
-    global moveSequence, lasers, moveDelay
+    global moveSequence, lasers, moveDelay#序列
     movex = movey = 0
     if moveSequence < 10 or moveSequence > 30: movex = -15
     if moveSequence == 10 or moveSequence == 30:
@@ -134,7 +134,7 @@ def init():
     moveCounter = moveSequence = player.status = score = player.laserCountdown = 0
     lasers = []
     moveDelay = 30
-    player.images = ["player","explosion1","explosion2","explosion3","explosion4","explosion5"]
+    player.images = ["player","explosion1","explosion2","explosion3","explosion4","explosion5"]#爆炸
     player.laserActive = 1
 
 def initAliens():
@@ -144,7 +144,7 @@ def initAliens():
         aliens.append(Actor("alien1", (210+(a % 6)*80,100+(int(a/6)*64))))
         aliens[a].status = 0
 
-def drawClipped(self):
+def drawClipped(self):#剪短
     screen.surface.blit(self._surf, (self.x-32, self.y-self.height+30),(0,0,64,self.height))
 
 def collideLaser(self, other):

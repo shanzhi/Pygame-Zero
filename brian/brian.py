@@ -1,4 +1,4 @@
-import pgzrun
+import pgzrun#最强大脑  观察力
 from random import randint
 import math
 WIDTH = 800

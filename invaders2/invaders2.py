@@ -89,7 +89,7 @@ def readHighScore():
     highScore.append(str(score)+ " " + player.name)
     highScore.sort(key=natural_key, reverse=True)
 
-def natural_key(string_):
+def natural_key(string_):#自然的
     return [int(s) if s.isdigit() else s for s in re.split(r'(\d+)', string_)]
 
 def writeHighScore():

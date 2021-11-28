@@ -1,4 +1,4 @@
-import pgzrun
+import pgzrun#斜放键盘 3D
 
 player = {"x":0, "y":3, "frame":0, "sx":0, "sy":0,
           "moveX":0, "moveY":0, "queueX":0, "queueY":0,
@@ -22,7 +22,7 @@ mapInfo = {"width":12, "height":12}
 
 mapBlocks = ["map1c","map2c"]
 mapHeight = [0,32]
-mazeSolved = False
+mazeSolved = False#解决了的
 
 def draw(): # Pygame Zero draw function
     screen.fill((0, 0, 0))

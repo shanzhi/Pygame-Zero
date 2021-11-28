@@ -4,7 +4,7 @@ HEIGHT = 600
 gameStatus = 0
 tileList = []
 correctList = []
-scrambleCountdown = 30
+scrambleCountdown = 30#爬
 scrambleList = [2, 0, 2, 0, 3, 1, 1, 1, 3, 0, 0, 2, 1, 2, 1, 3, 3, 0, 3, 0, 2, 0, 2, 2, 1, 3, 1, 3, 3, 1, 2]
 
 def draw(): # Pygame Zero draw function

@@ -9,7 +9,7 @@ OFFSETY = 300
 timer = 0
 mazeSolved = False
 
-mapData = map3d.loadmap("maps/map1.json")
+mapData = map3d.loadmap("D:/scl/zero/def/Pygame-Zero/amazeballs2/maps/map1.json")#卡这啦！！！
 
 def draw(): # Pygame Zero draw function
     screen.fill((0, 0, 0))

@@ -1,8 +1,9 @@
 # gamemaps module
 
 from pygame import image, Color
-moveimage = image.load('images/pacmanmovemap.png')
-dotimage = image.load('images/pacmandotmap.png')
+moveimage = image.load('D:/scl/zero/def/Pygame-Zero/pacman1/images/pacmanmovemap')
+dotimage = image.load('D:/scl/zero/def/Pygame-Zero/pacman1/images/pacmandotmap')
+
 
 def checkMovePoint(p):
     global moveimage

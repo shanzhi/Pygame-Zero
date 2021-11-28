@@ -1,10 +1,11 @@
-from random import randint
+import pgzrun
+from random import randint #比赛 +music
 WIDTH = 700 # Width of window
 HEIGHT = 800 # Height of window
 car = Actor("racecar") # Load in the car Actor image
 car.pos = 250, 700 # Set the car screen position
 SPEED = 4
-trackCount = 0
+trackCount = 0#轨道
 trackPosition = 250
 trackWidth = 120
 trackDirection = False
@@ -39,7 +40,7 @@ def update(): # Pygame Zero update function
 
 def makeTrack(): # Function to make a new section of track
     global trackCount, trackLeft, trackRight, trackPosition, trackWidth
-    trackLeft.append(Actor("barrier", pos = (trackPosition-trackWidth,0)))
+    trackLeft.append(Actor("barrier", pos = (trackPosition-trackWidth,0)))#障碍
     trackRight.append(Actor("barrier", pos = (trackPosition+trackWidth,0)))
     trackCount += 1   
 
@@ -63,7 +64,7 @@ def updateTrack(): # Function to update where the track blocks appear
 # End of functions
 makeTrack() # Make first block of track
 
-	
+pgzrun.go()	
 	
 
         
